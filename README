@@ -1,0 +1,37 @@
+NAME
+    `Device::BusPirate::Chip::INA219' - use an INA219 chip with
+    `Device::BusPirate'
+
+DESCRIPTION
+    This Device::BusPirate::Chip subclass provides specific communication to
+    a Texas Instruments INA219 chip attached to the Bus Pirate via I2C.
+
+    The reader is presumed to be familiar with the general operation of this
+    chip; the documentation here will not attempt to explain or define
+    chip-specific concepts or features, only the use of this module to
+    access them.
+
+METHODS
+    The following methods documented with a trailing call to `->get' return
+    Future instances.
+
+  $config = $ina->read_config->get
+    Reads and returns the current chip configuration as a `HASH' reference.
+
+  $ina->change_config( %config )->get
+    Changes the configuration. Any field names not mentioned will be
+    preserved.
+
+  $uv = $ina->read_shunt_voltage->get
+    Returns the current shunt voltage reading scaled integer in microvolts.
+
+  $mv = $ina->read_bus_voltage->get
+  ( $mv, $ovf, $cnvr ) = $ina->read_bus_voltage->get
+    Returns the current bus voltage reading, as a scaled integer in
+    milivolts.
+
+    The returned Future also yields the OVF and CNVR flags.
+
+AUTHOR
+    Paul Evans <leonerd@leonerd.org.uk>
+

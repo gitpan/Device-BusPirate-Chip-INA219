@@ -1,0 +1,24 @@
+---
+abstract: 'use an F<INA219> chip with C<Device::BusPirate>'
+author:
+  - 'Paul Evans <leonerd@leonerd.org.uk>'
+build_requires:
+  Test::More: '0.88'
+dynamic_config: 1
+generated_by: 'Module::Build version 0.421, CPAN::Meta::Converter version 2.142060'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Device-BusPirate-Chip-INA219
+provides:
+  Device::BusPirate::Chip::INA219:
+    file: lib/Device/BusPirate/Chip/INA219.pm
+    version: '0.01'
+requires:
+  Data::Bitfield: '0'
+  Device::BusPirate::Chip: '0'
+  Device::BusPirate::Mode::I2C: '0'
+resources:
+  license: http://dev.perl.org/licenses/
+version: '0.01'

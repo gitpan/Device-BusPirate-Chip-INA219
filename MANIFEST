@@ -1,0 +1,12 @@
+Build.PL
+Changes
+examples/ina291-tickit-ui.pl
+lib/Device/BusPirate/Chip/INA219.pm
+MANIFEST			This list of files
+t/00use.t
+t/99pod.t
+Makefile.PL
+README
+LICENSE
+META.yml
+META.json
